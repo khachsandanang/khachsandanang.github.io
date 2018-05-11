@@ -1,0 +1,90 @@
+.header {
+    background-color: $color-grey-dark-1;
+    grid-column: full-start / col-end 6;
+    background-image: linear-gradient(rgba($color-secondary, 0.7), rgba($color-secondary, 0.7)), 
+    url(../img/background-header.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 4rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: sidebar-start / full-end;
+    }
+    
+    display: grid;
+    grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+    grid-template-columns: minmax(min-content, max-content);
+    grid-row-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+
+
+    &__logo-own {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    &__logo {
+        justify-self: center;
+    }
+
+    &__heading {
+
+        &-1 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-family: $font-primary;
+            color: $color-primary;
+        }
+
+        &-2 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: $color-grey-light-1;
+            font-family: $font-display;
+            justify-self: center;
+        }
+    }
+
+    &__text {
+        color: $color-grey-light-1;
+        font-size: 1.5rem;
+        align-items: center;
+        filter: brightness(70%);
+
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-column-gap: 1.5rem;
+
+        &::before {
+            content: "";
+            background-color: $color-grey-light-1;
+            display: block;
+            height: 1px;
+        }
+
+        &::after {
+            content: "";
+            background-color: $color-grey-light-1;
+            display: block;
+            height: 1px;
+        }
+    }
+
+    &__btn {
+        justify-self: center;
+    }
+
+    &__logo-client {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(min-content, 1fr));
+        grid-gap: 1.5rem;
+
+        img {
+            max-width: 100%;
+            max-height: 5rem;
+            filter: brightness(60%);
+        }
+
+    }
+}

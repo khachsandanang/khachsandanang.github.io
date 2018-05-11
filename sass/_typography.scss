@@ -1,0 +1,27 @@
+%heading {
+    font-weight: 400;
+    font-family: $font-display;
+}
+
+.btn {
+    // outline: none;
+    border: none;
+    border-radius: 0;
+    background-color: $color-primary;
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+    
+    &:hover {
+        background-color: $color-primary-dark;
+    }
+}
+
+.margin-standard {margin-bottom: 2rem;}
+.margin-small {margin-bottom: 3rem;}
+.margin-medium {margin-bottom: 4rem;}
+.margin-large {margin-bottom: 8rem;}
+
